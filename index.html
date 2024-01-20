@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    /* .d {
+      height: 100px;
+      background: rgb(71, 181, 86);
+      z-index: 0;
+      color: black;
+    } */
+
+    nav {
+      display: flex;
+      background: rgb(255, 255, 255);
+      height: 60px;
+      align-items: center;
+      justify-content: space-between;
+      color: rgb(0, 0, 0);
+      /* z-index: 10; */
+      /* border: 2px solid red; */
+      /* padding: 0px 50px 0px 100px; */
+    }
+
+    .logo {
+      padding-left: 3%;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      /* border: 2px solid red; */
+    }
+
+    .logo {
+      font-weight: 700;
+      /* border: 2px solid red; */
+    }
+
+    li {
+      margin: 15px;
+      padding: 5px;
+      border-radius: 15px;
+      display: flex;
+
+      /* border: 2px solid red; */
+    }
+
+    a {
+      margin: 10px;
+      padding: 5px;
+
+      /* border: 2px solid red; */
+    }
+
+    li:hover,
+    .active {
+      color: rgb(249, 249, 249);
+      background-color: rgb(34, 34, 34);
+      transition: 0.7s;
+
+      /* width: 100px; */
+    }
+
+    .menu {
+      display: none;
+    }
+
+    #click {
+      display: none;
+    }
+
+    .bar {
+      height: 2px;
+      width: 20px;
+      margin: 5px;
+      background-color: aliceblue;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: flex;
+        background: rgb(255, 255, 255);
+        height: 60px;
+
+        justify-content: space-between;
+        color: rgb(31, 31, 31);
+        /* border: 2px solid red; */
+        /* padding: 10px 40px; */
+      }
+
+      ul {
+        display: block;
+        flex-direction: column;
+        background: rgb(255, 255, 255);
+        position: fixed;
+        top: 50px;
+        height: 100vh;
+        width: 100%;
+
+        margin: 0px;
+        right: -100%;
+        z-index: 1;
+        transition: 0.7s;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .bar {
+        height: 2px;
+        width: 20px;
+        margin: 3px;
+        background-color: rgb(0, 0, 0);
+      }
+
+      li {
+        text-align: center;
+        margin: 30px 70px;
+
+        /* align-items: center; */
+      }
+
+      .check {
+        margin-left: 65%;
+      }
+
+      .logo {
+        margin-right: 0%;
+      }
+
+      #click:checked ~ .un ul {
+        right: 0%;
+
+        /* transition: 0.7s; */
+      }
+
+      #click:checked ~ .check.menu :before {
+        content: "\f00d";
+      }
+    }
+  </style>
+  <body>
+    <!-- nav  -->
+    <section>
+      <nav>
+        <div class="logo">HI BRO</div>
+        <!-- <input type="text"> -->
+
+        <input type="checkbox" id="click" />
+
+        <label for="click" class="check">
+          <div class="menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </label>
+        <div class="un">
+          <ul>
+            <li class="active">
+              <a href="home.html">
+                Home
+                <!-- </button> -->
+              </a>
+            </li>
+            <li class="">
+              <a href="eligi.html">
+                Eligibility
+                <!-- </button> -->
+              </a>
+            </li>
+            <!-- <li><a>blog</a></li> -->
+            <li class="">
+              <a href="contact.html">
+                Contact
+                <!-- </button> -->
+              </a>
+            </li>
+            <li class="d">
+              <a href="donar.html">
+                Donate
+                <!-- </button> -->
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <!-- con  -->
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+        <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+          <h1 class="title-font font-medium text-3xl text-gray-900">
+            Slow-carb next level shoindcgoitch ethical authentic, poko scenester
+          </h1>
+          <p class="leading-relaxed mt-4">
+            Poke slow-carb mixtape knausgaard, typewriter street art gentrify
+            hammock starladder roathse. Craies vegan tousled etsy austin.
+          </p>
+        </div>
+        <div
+          class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
+        >
+          <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
+            Sign Up
+          </h2>
+          <div class="relative mb-4">
+            <label for="full-name" class="leading-7 text-sm text-gray-600"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div class="relative mb-4">
+            <label for="email" class="leading-7 text-sm text-gray-600"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <a href="home.html">
+            <button
+              class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            >
+              Button
+            </button>
+          </a>
+          <p class="text-xs text-gray-500 mt-3">
+            Literally you probably haven't heard of them jean shorts.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    /* .d {
+      height: 100px;
+      background: rgb(71, 181, 86);
+      z-index: 0;
+      color: black;
+    } */
+
+    nav {
+      display: flex;
+      background: rgb(255, 255, 255);
+      height: 60px;
+      align-items: center;
+      justify-content: space-between;
+      color: rgb(0, 0, 0);
+      /* z-index: 10; */
+      /* border: 2px solid red; */
+      /* padding: 0px 50px 0px 100px; */
+    }
+
+    .logo {
+      padding-left: 3%;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      /* border: 2px solid red; */
+    }
+
+    .logo {
+      font-weight: 700;
+      /* border: 2px solid red; */
+    }
+
+    li {
+      margin: 15px;
+      padding: 5px;
+      border-radius: 15px;
+      display: flex;
+
+      /* border: 2px solid red; */
+    }
+
+    a {
+      margin: 10px;
+      padding: 5px;
+
+      /* border: 2px solid red; */
+    }
+
+    li:hover,
+    .active {
+      color: rgb(249, 249, 249);
+      background-color: rgb(34, 34, 34);
+      transition: 0.7s;
+
+      /* width: 100px; */
+    }
+
+    .menu {
+      display: none;
+    }
+
+    #click {
+      display: none;
+    }
+
+    .bar {
+      height: 2px;
+      width: 20px;
+      margin: 5px;
+      background-color: aliceblue;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: flex;
+        background: rgb(255, 255, 255);
+        height: 60px;
+
+        justify-content: space-between;
+        color: rgb(31, 31, 31);
+        /* border: 2px solid red; */
+        /* padding: 10px 40px; */
+      }
+
+      ul {
+        display: block;
+        flex-direction: column;
+        background: rgb(255, 255, 255);
+        position: fixed;
+        top: 50px;
+        height: 100vh;
+        width: 100%;
+
+        margin: 0px;
+        right: -100%;
+        z-index: 1;
+        transition: 0.7s;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .bar {
+        height: 2px;
+        width: 20px;
+        margin: 3px;
+        background-color: rgb(0, 0, 0);
+      }
+
+      li {
+        text-align: center;
+        margin: 30px 70px;
+
+        /* align-items: center; */
+      }
+
+      .check {
+        margin-left: 65%;
+      }
+
+      .logo {
+        margin-right: 0%;
+      }
+
+      #click:checked ~ .un ul {
+        right: 0%;
+
+        /* transition: 0.7s; */
+      }
+
+      #click:checked ~ .check.menu :before {
+        content: "\f00d";
+      }
+    }
+    /* images */
+    body {
+      margin: 0;
+      overflow: auto;
+      /* background-color: rgb(86, 44, 184);
+      color: aliceblue; */
+    }
+
+    #carousel {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    img {
+      width: 100%;
+      height: 80%;
+      display: block;
+    }
+
+    /* Optional styling for navigation buttons */
+    #prev,
+    #next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: rgb(0, 0, 0);
+    }
+
+    #prev {
+      left: 10px;
+    }
+    #next {
+      right: 10px;
+    }
+
+    .needy {
+      background-color: rgb(86, 44, 184);
+    }
+  </style>
+  <body>
+    <!-- nav -->
+    <section>
+      <nav>
+        <div class="logo">HI BRO</div>
+        <!-- <input type="text"> -->
+
+        <input type="checkbox" id="click" />
+
+        <label for="click" class="check">
+          <div class="menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </label>
+        <div class="un">
+          <ul>
+            <li class="">
+              <a href="home.html">
+                Home
+                <!-- </button> -->
+              </a>
+            </li>
+            <li class="">
+              <a href="eligi.html">
+                Eligibility
+                <!-- </button> -->
+              </a>
+            </li>
+            <!-- <li><a>blog</a></li> -->
+            <li class="">
+              <a href="contact.html">
+                Contact
+                <!-- </button> -->
+              </a>
+            </li>
+            <li class="d">
+              <a href="donar.html">
+                Donate
+                <!-- </button> -->
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <!-- form -->
+    <section class="text-gray-600 body-font relative hachto">
+      <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+        <div
+          class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
+        >
+          <!-- First Image -->
+          <img
+            src="img/cdbcf077b62246123f74fcc919587b0b.jpg"
+            alt="Your First Image"
+            class="w-full h-full object-cover absolute inset-0"
+          />
+
+          <!-- Second Image -->
+          <img
+            src="img/cdbcf077b62246123f74fcc919587b0b.jpg"
+            alt="Your Second Image"
+            class="w-full h-full object-cover absolute inset-0"
+            style="opacity: 0.7"
+          />
+        </div>
+        <div
+          class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 marginmothi"
+        >
+          <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
+            Feedback
+          </h2>
+          <p class="leading-relaxed mb-5 text-gray-600">
+            Post-ironic portland shabby chic echo park, banjo fashion axe
+          </p>
+          <div class="relative mb-4">
+            <label for="name" class="leading-7 text-sm text-gray-600"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div class="relative mb-4">
+            <label for="email" class="leading-7 text-sm text-gray-600"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div class="relative mb-4">
+            <label for="address" class="leading-7 text-sm text-gray-600"
+              >Address</label
+            >
+            <input
+              type="text"
+              id="address"
+              name="address"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div class="relative mb-4">
+            <label for="idProof" class="leading-7 text-sm text-gray-600"
+              >ID Proof (Image)</label
+            >
+            <input
+              type="file"
+              id="idProof"
+              name="idProof"
+              accept="image/*"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div class="relative mb-4">
+            <label for="helpType" class="leading-7 text-sm text-gray-600"
+              >Type of Help</label
+            >
+            <div>
+              <input
+                type="checkbox"
+                id="farmer"
+                name="helpType"
+                value="farmer"
+              />
+              <label for="farmer">Farmer</label>
+
+              <input type="checkbox" id="woman" name="helpType" value="woman" />
+              <label for="woman">Woman</label>
+
+              <input type="checkbox" id="child" name="helpType" value="child" />
+              <label for="child">Child</label>
+
+              <input
+                type="checkbox"
+                id="education"
+                name="helpType"
+                value="education"
+              />
+              <label for="education">Education</label>
+
+              <input
+                type="checkbox"
+                id="shelter"
+                name="helpType"
+                value="shelter"
+              />
+              <label for="shelter">Shelter</label>
+
+              <input
+                type="checkbox"
+                id="health"
+                name="helpType"
+                value="health"
+              />
+              <label for="health">Health</label>
+
+              <input type="checkbox" id="food" name="helpType" value="food" />
+              <label for="food">Food</label>
+            </div>
+          </div>
+          <div class="relative mb-4">
+            <label for="questions" class="leading-7 text-sm text-gray-600"
+              >Any Questions</label
+            >
+            <textarea
+              id="questions"
+              name="questions"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+            ></textarea>
+          </div>
+          <button
+            class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+          >
+            Submit Request
+          </button>
+          <p class="text-xs text-gray-500 mt-3">Fill the form carefully</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="text-gray-600 body-font">
+      <div
+        class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+      >
+        <a
+          class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+            ></path>
+          </svg>
+          <span class="ml-3 text-xl">MAKE THEM FREE</span>
+        </a>
+        <p
+          class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+        >
+          © 2020 donationBox —
+          <a
+            href="https://twitter.com/knyttneve"
+            class="text-gray-600 ml-1"
+            rel="noopener noreferrer"
+            target="_blank"
+            >@sumitdhonde</a
+          >
+        </p>
+        <span
+          class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+        >
+          <a class="text-gray-500">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path
+                d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="0"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+              ></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the form element using its ID
+        var form = document.getElementById("feedbackForm");
+
+        // Add an event listener to the form on submit
+        form.addEventListener("submit", function (event) {
+          // Prevent the default form submission
+          event.preventDefault();
+
+          // Get form elements by their IDs
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var address = document.getElementById("address").value;
+          var idProof = document.getElementById("idProof").files[0];
+          var helpTypes = document.querySelectorAll(
+            'input[name="helpType"]:checked'
+          );
+          var questions = document.getElementById("questions").value;
+
+          // Create an object to hold the form data
+          var formData = {
+            Name: name,
+            Email: email,
+            Address: address,
+            IDProof: idProof ? idProof.name : "No ID Proof",
+            HelpTypes: Array.from(helpTypes).map((checkbox) => checkbox.value),
+            Questions: questions,
+          };
+
+          // Display the form data on the console
+          console.log(formData);
+        });
+      });
+    </script>
+  </body>
+</html>
